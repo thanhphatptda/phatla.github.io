@@ -38,6 +38,35 @@
             animation-delay: 1s;
         }
 
+        div.at-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+        }
+        .at-item {
+            width: 100px; height: 100px; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURf/JDv///wAAAA9fqHsAAAVZSURBVHja7d1ZkhwhDATQRPc/tB2OcLgXBCkhgRgXn2M3zWtRCzvaD0l4IA/kgTyQB/JAoiDyJ9UusFZEfDkKU0T0InYhUlzRKyKU/1pbYYBIbcZ3Ab8gqCb5KD8AcBCUCsq34m8Bp7dfoE5QOgolIH1IDUlfwUOKSFQG5netl5CcpqgKLSA65KRkxIDQkNOSIUNzfL79vn36iGSoMEI+bnQ7JTOG6vhqj3zksTcoU4Z2pWuQMxKCoQfku4X4mdEuCcMYOBTIdgnFGF6yaLOQbLjkOcYwIBpkp4RlDB29XpROlonVi2aMHSpkk4RnOCC9kORILIyJQ4fkS0yMmaPf06i/PcdJbIz5/UaHiD2zNMY8IErf7/AVWowl/f6MmTF3jCC6RMydUK+fszMIh9Ybr33NRCKmBJvDD7FJRJIYVEDU8RH1u/oSkcOOMUTIQBPlXKBwdxg0a0g+JWT53GGRCMhcYiqYi0Le8tEcIcFirbfj2yqElsCelttSJMQiARYg80Z6JgSLCi4PwzsRmk8S4XjNZrFieSES5Jj8IJa3bTSHJIwxDoqp1eCBBCpG+UkcZNzoBXIltmYciPbREsPSZdXp4WyREHE6LA///tCtoVk9m+akdM57FNxzyds/QEHE7HA0Rd7+1d7PMZ141vmZ1hjT57inYrEQsTj63SeGoHgcxFTAz0kEBoZtvPbzN2gZkH8zVGjHrKPF/DOsQt4nDbEOot/L90OsQmz1istwIQsXxDqkJHSOi02QBUiQI0MCw9fGOUaSDZBABxGTDEhbHnP1tD/TIhLrmEuSLnZEO4IlNSFIgWQ5YkNCQqg3XueYaEyGiHN4ITEhwcmARIYE566Q2JDEQRZmDkRkCv8tcgdEYiFpNSvwWYKzNSuubuFszYqrW1gPSBYEd0HaFkh+zQqrW9gVELVUQXVrD2Ta/XgHZLwUcgfE0PducPTmBa5ffvmQ2fLUWyAyW2h7N0Sug8gPhfz7Cw8JmovCDkMzjtc/ck3piyByBUQGA6MXQ9oVEPFBpBIEqxA8kAyI0Bf71xKMMhCsQVAMwizFePkb1ZTeDWFD0l3cg3IQsUKkHkSTEBBcAWlrAQmCZIbEMuh9AsJKGjedYm/DyiFplmkhUZAEicmxH0JLWMcxCKjFlo12xEGaETKax9dZrBs6eh8LWZ+cmQmJlcSvQMyBjGfuxu6OED4Yyk2ntq/32z6GGDXJPz0iCJas3sz3XCNTSsS9PP/2O8Mg5qG0GfKO8X94/ytKdIqF4GQKXHSMB7JX8j9ApAIEURDgkpCUh2AZIpUgWfuiFAwJqgckc++gkiG5BpKwLVXNkKB+QJJ2PKsaElxQszJ2Bawbkpsg3g0ngZtCchXEvJep1IPADwGuCsk1EDgg8qMgwF116x4IzJDNNStoc1YcDYhjwKQiJHSDb5yrWc4xLBtkpyImJDEQV4EkdJwXITXLv1cgP6FjEhIEBIT/acf7yC+FJABCjd2OlidZZ3VQEPFOCLIm3wQV/tQkt6O5FXZJAuS9ZE6FhcKeLObbcFWoKcvsSlhfSLA+r5RYOWI86mMvJOGMVP5QrkBIzlmv7Ia6M4j9+dyCk/vcOrgCknn0rvMkQRck9xw7ajfdCEj+SciewzZR0EFJViG7DqaebvC/CNl3wLb1ZF0TZO854bazji2Q3eedqxLyfPYijAFlCXLo+PkuZQFyiKGsC3BD5JyjS/FCjjJ6FB9Ejjv67U4jpASjSzFByjA6FANESjnaeOM0HVKO8WZp5Euj1GSwEwaMPVE3QVq7EtKuZShdpvcx1BGrdl1C+yHpgTyQB/JAHsgDWUm/AAJdgUyJ5W1VAAAAAElFTkSuQmCC) no-repeat; 
+            
+            animation-name: bg-pan-tl;
+            animation-duration: 2.2s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-fill-mode: both;
+                
+            /* shorthand
+            animation: bg-pan-tl 2.2s ease-in 0s infinite reverse both;*/
+        }
+        @keyframes bg-pan-tl {
+                
+            0% {
+                background-position:100% 100%;
+            }
+            100% {
+                background-position:0% 0%;
+            }
+        }
 
     </style>
 </head>
@@ -47,5 +76,8 @@
         <figcaption>BIT</figcaption>
     </figure>
     
+    <div class='at-container'>
+        <div class='at-item' ></div>
+    </div>
 </body>
 </html>"
